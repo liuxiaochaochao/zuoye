@@ -69,6 +69,29 @@ int main()
         }
         if (a == 4)
         {
+            printf("请输入当前位置坐标：\n");
+            int x;
+            int y;
+            scanf("%d", &x);
+            scanf("%d", &y);
+            double min = 1000;
+            int che = 0;
+            for (int i = 0; i < index; i++)
+            {
+                int dx = x - arr[i].x;
+                int dy = y - arr[i].y;
+                double l = sqrt(dx * dx + dy * dy);
+                if (min > l)
+                {
+                    min = l;
+                    che = i;
+                }
+            }
+            printf("我的位置与第%d个车的距离最小为%lf\n", che + 1, min);
+            printf("\n点击回车继续\n");
+            char s;
+            scanf("%c", &s);
+            scanf("%c", &s);
         }
         if (a == 5)
         {
